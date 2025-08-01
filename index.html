@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoTech Mobile Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 1rem;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            max-width: 400px;
+            margin: auto;
+        }
+        button {
+            padding: 1rem;
+            font-size: 1.1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (min-width: 600px) {
+            .container {
+                max-width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>EcoTech Mobile Dashboard</h1>
+    <div class="container">
+        <form action="/sync" method="post"><button>📤 Sync Serials to Firebase</button></form>
+        <form action="/logwipe" method="post"><button>🧼 Log Wipe Event</button></form>
+        <form action="/triggercert" method="post"><button>📄 Trigger Certificate</button></form>
+        <form action="/backup" method="post"><button>💾 Backup Inventory</button></form>
+    </div>
+</body>
+</html>
